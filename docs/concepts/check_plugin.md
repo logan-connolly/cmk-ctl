@@ -47,6 +47,7 @@ my_custom_plugin/
 |_ agent_based/            # Generated py the command above.
 |  |_ my_custom_plugin.py  # Define the check plugin logic here.
 |_ dist/                   # Where the packaged plugins are outputed.
+|_ tests/                  # Generated (site-less) tests
 ```
 
 The `my_custom_plugin.py` file will be prefilled with the following contents:
@@ -106,6 +107,8 @@ check_plugin_my_custom_plugin = CheckPlugin(
 ```
 
 **Note:** by initializing a check plugin with the v2 architecture, an external developer will follow best practices, and will be onboarded more quickly with check plugin development.
+
+Just like the source code, site-less tests for the base functionality will also be generated. This is important for verifying the parsing, checking, etc. when the developer makes changes to the plugin. It is important that the tests are site-less because plugin development should not rely on a running checkmk instance.
 
 ### release
 

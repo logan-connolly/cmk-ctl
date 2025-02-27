@@ -64,6 +64,12 @@ from cmk.agent_based.v2 import (
 )
 
 
+# TODO: determine the content of the example plugin. It's important that
+# an external developer gets a "complete" plugin that they can then package
+# and run to verify the workflow. Reason: it's much easier to adapt an
+# existing plugin then it is to fill in the boilerplate from scratch. This
+# would also apply to setting up a special agent in accordance to v2.
+
 def parse_my_custom_plugin(string_table: StringTable):
     # add parsing logic here (remove comment afterwards)
     ...
